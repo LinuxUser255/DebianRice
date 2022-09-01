@@ -127,7 +127,7 @@ git clone https://github.com/defparam/smuggler.git /opt/smuggler/
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Pay-Loads-All-The-Things/
 git clone https://github.com/LinuxUser255/RandoHackingStuff.git /opt/HackingStuff/
 git clone https://github.com/LinuxUser255/Mullvad_Wireguard.git /opt/Mullvad_Wireguard/
-git clone https://github.com/LinuxUser255/Instagram-downloader.git /opt/Instagram-downloade/
+git clone https://github.com/LinuxUser255/Instagram-downloader.git /opt/Instagram-downloader/
 git clone https://github.com/LinuxUser255/passwordgen.git /opt/passwordgen/
 git clone  https://github.com/LinuxUser255/Monero_Extras.git /opt/Monero_Extras/
 git clone https://github.com/LinuxUser255/Python_Intruder.git  /opt/Python_Intruder/
