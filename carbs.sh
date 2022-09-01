@@ -33,10 +33,8 @@ sudo apt install npm
 sudo apt install openrgb
 sudo apt install ckb-next
 
-
 # Pip requirements for the repos below & vim plugins
 sudo pip3 install -r requirements.txt
-
 
 # Install cargo and Allacritty dependencies
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -47,7 +45,7 @@ cargo install alacritty
 # Download stuff from youtube
 python3 -m pip install -U yt-dlp
 
-#Download & install Electrum BTC Wallet
+# Download & install Electrum BTC Wallet
 # Install dependencies
 sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
 
