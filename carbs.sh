@@ -34,6 +34,10 @@ sudo apt install openrgb
 sudo apt install ckb-next
 
 
+# Pip requirements for the repos below & vim plugins
+sudo pip3 install -r requirements.txt
+
+
 # Install cargo and Allacritty dependencies
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
@@ -43,8 +47,20 @@ cargo install alacritty
 # Download stuff from youtube
 python3 -m pip install -U yt-dlp
 
-# Pip requirements for the repos below & vim plugins
-sudo pip3 install -r requirements.txt
+#Download & install Electrum BTC Wallet
+# Install dependencies
+sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
+
+# download package
+wget https://download.electrum.org/4.3.1/Electrum-4.3.1.tar.gz
+
+# Verify signatures
+wget https://download.electrum.org/4.3.1/Electrum-4.3.1.tar.gz.asc
+gpg --verify Electrum-4.3.1.tar.gz.asc
+
+#Install with pip
+sudo apt-get install python3-setuptools python3-pip
+python3 -m pip install --user Electrum-4.3.1.tar.gz
 
 
 # Install some dot files
@@ -53,7 +69,7 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
 
-# INstall some shortcut commands/scripts
+# Install some shortcut commands/scripts
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/f -o /usr/bin/f; chmod +x /usr/bin/f
 curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fastgrep    -o /usr/bin/fastgrep; chmod +x /usr/bin/fastgrep
 curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fff    -o /usr/bin/fff; chmod +x /usr/bin/fff
@@ -69,8 +85,8 @@ curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/red    -o
 curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/window_size.sh    -o /usr/bin/window_size.sh; chmod +x /usr/bin/window_size.sh
 curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/xmrlert    -o /usr/bin/xmrlert; chmod +x /usr/bin/xmrlert
 
-# Give /opt directory ownership to non-root user
-sudo chown ${USER} * /opt
+# grant ownership to reg user over /opt
+sudo chown ${USER} /opt
 git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
 git clone https://github.com/LinuxUser255/BashAndLinux.git /opt/BashAndLinux/
@@ -90,6 +106,10 @@ sh /opt/Mullvad_Wireguard/install.sh
 curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.AppImage
 chmod +x /opt/Obsidian-0.15.9.AppImage
 mv /opt/Obsidian-0.15.9.AppImage -t /usr/bin
+
+# DL and INstall Free Tube
+wget https://github.com/FreeTubeApp/FreeTube/releases/tag/v0.17.1-beta/freetube_0.17.1_amd64.deb
+sudo dpkg -i freetube_0.17.1_amd64.deb
 
 
 # Install Brave browser
@@ -147,13 +167,13 @@ python3 install.py --all
 # Chang Default Shell to use ZSH
 sudo -s
 chsh -s /bin/zsh root
-chsh -s /bin/zsh linux
+chsh -s /bin/zsh linux # <-- put the user name you created when installing Linux
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Final update
-sudo apt update
+sudo apt update; sudo apt upgrade
 
 # Reminder
 printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/professional-community-2022-8-2  \e[0m"
