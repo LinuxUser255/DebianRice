@@ -69,20 +69,20 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
 
 # Install some shortcut commands/scripts
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/f -o /usr/bin/f; chmod +x /usr/bin/f
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fastgrep    -o /usr/bin/fastgrep; chmod +x /usr/bin/fastgrep
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fff    -o /usr/bin/fff; chmod +x /usr/bin/fff
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/ggg    -o /usr/bin/ggg; chmod +x /usr/bin/ggg
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/cookiemonster    -o /usr/bin/cookiemonster; chmod +x /usr/bin/cookiemonster
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/cookiesteal.txt    -o /usr/bin/cookiesteal.txt; chmod +x /usr/bin/cookiesteal.txt
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/headers.py    -o /usr/bin/headers.py; chmod +x /usr/bin/headers.py
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/line_spacing.txt    -o /usr/bin/line_spacing.txt;  chmod +x /usr/bin/line_spacing.txt
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/new    -o /usr/bin/new; chmod +x /usr/bin/new
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/printawk    -o /usr/bin/printawk; chmod +x /usr/bin/printawk
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/py    -o /usr/bin/py; chmod +x /usr/bin/py
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/red    -o /usr/bin/red; chmod +x /usr/bin/red
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/window_size.sh    -o /usr/bin/window_size.sh; chmod +x /usr/bin/window_size.sh
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/xmrlert    -o /usr/bin/xmrlert; chmod +x /usr/bin/xmrlert
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/f  -o  /usr/bin/f; chmod +x /usr/bin/f
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fastgrep  -o  /usr/bin/fastgrep; chmod +x /usr/bin/fastgrep
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fff  -o  /usr/bin/fff; chmod +x /usr/bin/fff
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/ggg  -o  /usr/bin/ggg; chmod +x /usr/bin/ggg
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/cookiemonster  -o  /usr/bin/cookiemonster; chmod +x /usr/bin/cookiemonster
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/cookiesteal.txt -o  /usr/bin/cookiesteal.txt /usr/bin/cookiesteal.txt
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/headers.py  -o  /usr/bin/headers.py; chmod +x /usr/bin/headers.py
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/line_spacing.txt  -o  /usr/bin/line_spacing.txt  /usr/bin/line_spacing.txt
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/new  -o  /usr/bin/new; chmod +x /usr/bin/new
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/printawk  -o  /usr/bin/printawk; chmod +x /usr/bin/printawk
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/py  -o  /usr/bin/py; chmod +x /usr/bin/py
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/red  -o  /usr/bin/red; chmod +x /usr/bin/red
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/window_size.sh  -o  /usr/bin/window_size.sh; chmod +x /usr/bin/window_size.sh
+curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/xmrlert  -o  /usr/bin/xmrlert; chmod +x /usr/bin/xmrlert
 
 # grant ownership to reg user over /opt
 sudo chown ${USER} /opt
@@ -111,15 +111,15 @@ wget https://github.com/FreeTubeApp/FreeTube/releases/tag/v0.17.1-beta/freetube_
 sudo dpkg -i freetube_0.17.1_amd64.deb
 
 # Install Signal
-# 1. Install our official public software signing key
+# Install our official public software signing key
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 
-# 2. Add our repository to your list of repositories
+# repository to your list of repositories
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
   sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
-# 3. Update your package database and install signal
+# Update your package database and install signal
 sudo apt update; sudo apt install signal-desktop
 
 # Install Brave browser
