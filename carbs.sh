@@ -103,8 +103,8 @@ chmod +x /opt/red
 chmod +x /opt/window_size.sh
 chmod +x /opt/xfh.sh
 chmod +x /opt/xmrlert
-chmod +x /opt/passgen2.py
-chmod +x /opt/passwordgen/py
+chmod +x /opt/pw1
+chmod +x /opt/pw2
 
 
 sudo mv /opt/f  -t /usr/bin
@@ -123,8 +123,8 @@ sudo mv /opt/red -t /usr/bin
 sudo mv /opt/window_size.sh -t /usr/bin
 sudo mv /opt/xfh.sh -t /usr/bin
 sudo mv /opt/xmrlert -t /usr/bin
-sudo mv /opt/passgen2.py -t /usr/bin
-sudo mv /opt/passwordgen/py -t /usr/bin
+sudo mv /opt/pw1 -t /usr/bin
+sudo mv /opt/pw2 -t /usr/bin
 
 git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
