@@ -34,7 +34,7 @@ sudo apt install openrgb
 sudo apt install ckb-next
 
 # Pip requirements for the repos below & vim plugins
-sudo pip3 install -r requirements.txt
+# sudo pip3 install -r requirements.txt
 
 # Install cargo and Allacritty dependencies
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
