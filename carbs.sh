@@ -18,6 +18,7 @@ sudo apt install mpv
 sudo apt install simplescreenrecorder
 sudo apt install vlc
 sudo apt install i3
+sudo apt install net-tools
 sudo apt install sqlmap
 sudo apt install netdiscover
 sudo apt install nmap
