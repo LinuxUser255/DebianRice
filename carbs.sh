@@ -66,24 +66,59 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
 
+sudo chown ${USER} * /opt
 # Install some shortcut commands/scripts
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/f  -o  /usr/bin/f; chmod +x /usr/bin/f
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fastgrep  -o  /usr/bin/fastgrep; chmod +x /usr/bin/fastgrep
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/fff  -o  /usr/bin/fff; chmod +x /usr/bin/fff
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/ggg  -o  /usr/bin/ggg; chmod +x /usr/bin/ggg
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/cookiemonster  -o  /usr/bin/cookiemonster; chmod +x /usr/bin/cookiemonster
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/cookiesteal.txt -o  /usr/bin/cookiesteal.txt /usr/bin/cookiesteal.txt
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/headers.py  -o  /usr/bin/headers.py; chmod +x /usr/bin/headers.py
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/line_spacing.txt  -o  /usr/bin/line_spacing.txt  /usr/bin/line_spacing.txt
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/new  -o  /usr/bin/new; chmod +x /usr/bin/new
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/printawk  -o  /usr/bin/printawk; chmod +x /usr/bin/printawk
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/py  -o  /usr/bin/py; chmod +x /usr/bin/py
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/red  -o  /usr/bin/red; chmod +x /usr/bin/red
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/window_size.sh  -o  /usr/bin/window_size.sh; chmod +x /usr/bin/window_size.sh
-curl -Ls https://github.com/LinuxUser255/BashAndLinux/blob/main/UsrBin/xmrlert  -o  /usr/bin/xmrlert; chmod +x /usr/bin/xmrlert
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/f  -o  /opt/f
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/fastgrep  -o  /opt/fastgrep
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/fff  -o  /opt/fff
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/ggg  -o  /opt/ggg
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/cookiemonster  -o  /opt/cookiemonster
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/cookiesteal.txt -o  /opt/cookiesteal.txt
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/headers.txt -o /opt/headers.txt
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/headers.py  -o  /opt/headers.py
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/line_spacing.txt  -o  /opt/line_spacing.txt 
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/new  -o  /opt/new
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/printawk  -o  /opt/printawk
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/py  -o  /opt/py
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/red  -o  /opt/red
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/window_size.sh  -o  /opt/window_size.sh
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xfh.sh -o /opt/xfh.sh
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xmrlert  -o  /opt/xmrlert
 
-# grant ownership to reg user over /opt
-sudo chown ${USER} /opt
+chmod +x /opt/f 
+chmod +x /opt/fastgrep
+chmod +x /opt/fff
+chmod +x /opt/ggg
+chmod +x /opt/cookiemonster
+chmod +x /opt/cookiesteal.txt
+chmod +x /opt/headers.txt
+chmod +x /opt/headers.py
+chmod +x /opt/line_spacing.txt
+chmod +x /opt/new
+chmod +x /opt/printawk
+chmod +x /opt/py
+chmod +x /opt/red
+chmod +x /opt/window_size.sh
+chmod +x /opt/xfh.sh
+chmod +x /opt/xmrlert
+
+sudo mv /opt/f  -t /usr/bin
+sudo mv /opt/fastgrep -t /usr/bin
+sudo mv /opt/fff -t /usr/bin
+sudo mv /opt/ggg -t /usr/bin
+sudo mv /opt/cookiemonster -t /usr/bin
+sudo mv /opt/cookiesteal.txt -t /usr/bin
+sudo mv /opt/headers.txt -t /usr/bin
+sudo mv /opt/headers.py -t /usr/bin
+sudo mv /opt/line_spacing.txt -t /usr/bin
+sudo mv /opt/new -t /usr/bin
+sudo mv /opt/printawk -t /usr/bin
+sudo mv /opt/py -t /usr/bin
+sudo mv /opt/red -t /usr/bin
+sudo mv /opt/window_size.sh -t /usr/bin
+sudo mv /opt/xfh.sh -t /usr/bin
+sudo mv /opt/xmrlert -t /usr/bin
+
 git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
 git clone https://github.com/LinuxUser255/BashAndLinux.git /opt/BashAndLinux/
