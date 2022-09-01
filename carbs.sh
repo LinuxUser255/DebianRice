@@ -84,8 +84,8 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/window_size.sh  -o  /opt/window_size.sh
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xfh.sh -o /opt/xfh.sh
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xmrlert  -o  /opt/xmrlert
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/passwordgen/master/passgen2.py -o /opt/passgen2.py
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/passwordgen/master/passwordgen.py -o /opt/passwordgen.py
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/passwordgen/master/pw1 -o /opt/pw1
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/passwordgen/master/pw2 -o /opt/pw2
 
 chmod +x /opt/f 
 chmod +x /opt/fastgrep
@@ -163,8 +163,8 @@ git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Install Wireguard and Mullvad
-chmod +x /opt/Mullvad_Wireguard/install.sh
-sh /opt/Mullvad_Wireguard/install.sh
+# chmod +x /opt/Mullvad_Wireguard/install.sh
+# sh /opt/Mullvad_Wireguard/install.sh
 
 # Install Obsidian, the markdown note taking app
 curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.AppImage
