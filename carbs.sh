@@ -127,6 +127,32 @@ git clone https://github.com/defparam/smuggler.git /opt/smuggler/
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Pay-Loads-All-The-Things/
 git clone https://github.com/LinuxUser255/RandoHackingStuff.git /opt/HackingStuff/
 git clone https://github.com/LinuxUser255/Mullvad_Wireguard.git /opt/
+git clone https://github.com/LinuxUser255/Instagram-downloader.git /opt/
+git clone https://github.com/LinuxUser255/passwordgen.git/opt
+git clone  https://github.com/LinuxUser255/Monero_Extras.git /opt
+git clone https://github.com/LinuxUser255/Python_Intruder.git  /opt
+git clone https://github.com/LinuxUser255/xmrig.git  /opt
+git clone  https://github.com/PortSwigger/http-request-smuggler.git /opt
+git clone https://github.com/LinuxUser255/Python-Object-Oriented-Programming---4th-edition.git  /opt
+git clone https://github.com/LinuxUser255/Micro-Degree-in-Python-Security.git  /opt
+git clone https://github.com/LinuxUser255/Python-for-Everyday-Life.git  /opt
+git clone https://github.com/LinuxUser255/Expert-Python-Programming-Fourth-Edition.git  /opt
+git clone https://github.com/LinuxUser255/turbo-intruder.git  /opt
+git clone https://github.com/LinuxUser255/Python_Penetration_Testing.git  /opt
+git clone https://github.com/LinuxUser255/Python-Fundamentals.git  /opt
+git clone https://github.com/LinuxUser255/Modern-Python-Cookbook-Second-Edition.git  /opt
+git clone https://github.com/LinuxUser255/Python-3-Object-Oriented-Programming-Third-Edition.git  /opt
+git clone https://github.com/LinuxUser255/Clean-Code-in-Python-Second-Edition.git  /opt
+git clone https://github.com/LinuxUser255/Functional-Python-Programming-Second-Edition.git  /opt
+git clone https://github.com/LinuxUser255/Python-Web-Scraping-Cookbook.git  /opt
+git clone https://github.com/LinuxUser255/Python-Penetration-Testing-Cookbook.git  /opt
+git clone https://github.com/LinuxUser255/Learning-Concurrency-in-Python.git  /opt
+git clone https://github.com/LinuxUser255/Mastering-Python-Networking.git  /opt
+git clone https://github.com/LinuxUser255/Effective-Python-Penetration-Testing.git  /opt
+git clone https://github.com/LinuxUser255/Python-Web-Scraping-Second-Edition.git  /opt
+git clone https://github.com/LinuxUser255/Welcome_to_INITECH.git  /opt
+git clone https://github.com/LinuxUser255/MS17-011.git  /opt
+
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Install Wireguard and Mullvad
@@ -180,10 +206,7 @@ sudo chown ${USER} /opt/IntelliJ_IDEA
 curl -Ls https://www.jetbrains.com/idea/download/download-thanks.html?platform=linux&code=IIC -o /opt/IntelliJ_IDEA
 
 # Install plugins for vim and neovim
-# NeoVim Chad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-
-# Vim Plug
+## Vim Plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -205,6 +228,9 @@ apt install mono-complete golang nodejs default-jdk npm
 # Compile YCM
 cd ~/.vim/YouCompleteMe
 python3 install.py --all
+
+# NeoVim CHad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Chang Default Shell to use ZSH
 sudo -s
