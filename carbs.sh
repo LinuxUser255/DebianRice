@@ -62,7 +62,6 @@ gpg --verify Electrum-4.3.1.tar.gz.asc
 sudo apt-get install python3-setuptools python3-pip
 python3 -m pip install --user Electrum-4.3.1.tar.gz
 
-
 # Install some dot files
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.vimrc -o ~/.vimrc
