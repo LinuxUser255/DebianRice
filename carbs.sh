@@ -84,6 +84,8 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/window_size.sh  -o  /opt/window_size.sh
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xfh.sh -o /opt/xfh.sh
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xmrlert  -o  /opt/xmrlert
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/passwordgen/master/passgen2.py -o /opt/passgen2.py
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/passwordgen/master/passwordgen.py -o /opt/passwordgen.py
 
 chmod +x /opt/f 
 chmod +x /opt/fastgrep
@@ -101,6 +103,9 @@ chmod +x /opt/red
 chmod +x /opt/window_size.sh
 chmod +x /opt/xfh.sh
 chmod +x /opt/xmrlert
+chmod +x /opt/passgen2.py
+chmod +x /opt/passwordgen/py
+
 
 sudo mv /opt/f  -t /usr/bin
 sudo mv /opt/fastgrep -t /usr/bin
@@ -118,6 +123,8 @@ sudo mv /opt/red -t /usr/bin
 sudo mv /opt/window_size.sh -t /usr/bin
 sudo mv /opt/xfh.sh -t /usr/bin
 sudo mv /opt/xmrlert -t /usr/bin
+sudo mv /opt/passgen2.py -t /usr/bin
+sudo mv /opt/passwordgen/py -t /usr/bin
 
 git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
