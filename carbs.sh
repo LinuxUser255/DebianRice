@@ -98,7 +98,6 @@ wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawle
 chmod +x /opt/Mullvad_Wireguard/install.sh
 sh /opt/Mullvad_Wireguard/install.sh
 
-
 # Install Obsidian, the markdown note taking app
 curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.AppImage
 chmod +x /opt/Obsidian-0.15.9.AppImage
