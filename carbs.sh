@@ -7,6 +7,7 @@ sudo apt install wget
 sudo apt install curl
 sudo apt install vim
 sudo apt install neovim
+sudo apt install neofetch
 sudo apt install zsh
 sudo apt install pass
 sudo apt install rip-grep
