@@ -15,6 +15,8 @@ sudo apt install terminator
 sudo apt install kwrite
 sudo apt install audacious
 sudo apt install kdenlive
+sudo apt install haruna
+sudo apt install ranger
 sudo apt install mpv
 sudo apt install simplescreenrecorder
 sudo apt install vlc
