@@ -164,8 +164,8 @@ git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Install Wireguard and Mullvad
-# chmod +x /opt/Mullvad_Wireguard/install.sh
-# sh /opt/Mullvad_Wireguard/install.sh
+chmod +x /opt/Mullvad_Wireguard/install.sh
+sh /opt/Mullvad_Wireguard/install.sh
 
 # Install Obsidian, the markdown note taking app
 curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.AppImage
@@ -174,7 +174,7 @@ mv /opt/Obsidian-0.15.9.AppImage -t /usr/bin
 
 # DL and INstall Free Tube
 wget https://github.com/FreeTubeApp/FreeTube/releases/tag/v0.17.1-beta/freetube_0.17.1_amd64.deb
-sudo dpkg -i freetube_0.17.1_amd64.deb
+sudo dpkg -i freetube_0.17.1_arm64.deb
 
 # Install Signal
 # Install our official public software signing key
