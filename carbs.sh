@@ -237,16 +237,17 @@ apt install mono-complete golang nodejs default-jdk npm
 cd ~/.vim/YouCompleteMe
 python3 install.py --all
 
-# NeoVim CHad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-
 # Chang Default Shell to use ZSH
+read -p 'Enter the username you created when installing Debian: ' USER_NAME
 sudo -s
 chsh -s /bin/zsh root
-chsh -s /bin/zsh linux # <-- put the user name you created when installing Linux
+chsh -s /bin/zsh  ${USER_NAME} # <-- put the user name you created when installing Linux
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# NeoVim CHad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Final update
 sudo apt update; sudo apt upgrade
