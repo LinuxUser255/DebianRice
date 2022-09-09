@@ -238,7 +238,9 @@ cd ~/.vim/YouCompleteMe
 python3 install.py --all
 
 # Chang Default Shell to use ZSH
-read -p 'Enter the username you created when installing Debian: ' USER_NAME
+echo 'Enter the username: '
+read USER_NAME
+
 sudo -s
 chsh -s /bin/zsh root
 chsh -s /bin/zsh  ${USER_NAME} # <-- put the user name you created when installing Linux
