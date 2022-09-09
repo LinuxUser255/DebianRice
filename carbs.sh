@@ -14,8 +14,11 @@ sudo apt install rip-grep
 sudo apt install terminator
 sudo apt install kwrite
 sudo apt install audacious
+sudo apt install mystiq
 sudo apt install kdenlive
 sudo apt install haruna
+sudo apt install kodi
+sudo apt install gimp
 sudo apt install ranger
 sudo apt install mpv
 sudo apt install simplescreenrecorder
