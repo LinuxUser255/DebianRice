@@ -1,6 +1,6 @@
-![debian-logo](https://user-images.githubusercontent.com/46334926/190446611-cd8882d5-546e-46ac-8185-506caf3c23f4.png)
-# DebianRice
 
+# DebianRice 
+![debian-logo](https://user-images.githubusercontent.com/46334926/190446611-cd8882d5-546e-46ac-8185-506caf3c23f4.png)
 ```
 This is a somewhat rough and hacked together script, but it gets the job done. 
 I will probably edit it sometime in the future, make it look better and use a CSV.
