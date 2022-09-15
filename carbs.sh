@@ -271,12 +271,15 @@ sudo apt update; sudo apt upgrade
 echo ""
 printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/  \e[0m"
 printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
-printf "\e[1;31m Mullvad should be installed and ready to run now. \e[0m"
+echo ""
 
 # Chang Default Shell to use ZSH
-echo 'Chang Default Shell to use ZSH. Enter your username. The name of the user who you are logged in as: '
-read USER_NAME
+printf "\e[1;31m Changing the default Shell ZSH \e[0m"
+echo ""
 
 sudo -s
 chsh -s /bin/zsh root
-chsh -s /bin/zsh  ${USER_NAME} 
+chsh -s /bin/zsh ${USER} 
+
+echo "Done!"
+
