@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Update and stuff
+# Feel free to comment out any of the stuff you don't want.
 sudo apt update; sudo apt upgrade
 sudo apt install git
 sudo apt install wget
@@ -73,6 +74,7 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
 
+# Give the current user ownership over the options directory
 sudo chown ${USER} * /opt
 # Install some shortcut commands/scripts
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/f  -o  /opt/f
@@ -133,6 +135,7 @@ sudo mv /opt/xmrlert -t /usr/bin
 sudo mv /opt/pw1 -t /usr/bin
 sudo mv /opt/pw2 -t /usr/bin
 
+# Some hacking stuff and a bunch of Python repos
 git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
 git clone https://github.com/LinuxUser255/BashAndLinux.git /opt/BashAndLinux/
@@ -143,10 +146,10 @@ git clone https://github.com/LinuxUser255/RandoHackingStuff.git /opt/HackingStuf
 git clone https://github.com/LinuxUser255/Mullvad_Wireguard.git /opt/Mullvad_Wireguard/
 git clone https://github.com/LinuxUser255/Instagram-downloader.git /opt/Instagram-downloader/
 git clone https://github.com/LinuxUser255/passwordgen.git /opt/passwordgen/
-git clone  https://github.com/LinuxUser255/Monero_Extras.git /opt/Monero_Extras/
+git clone https://github.com/LinuxUser255/Monero_Extras.git /opt/Monero_Extras/
 git clone https://github.com/LinuxUser255/Python_Intruder.git  /opt/Python_Intruder/
 git clone https://github.com/LinuxUser255/xmrig.git  /opt/xmrig/
-git clone  https://github.com/PortSwigger/http-request-smuggler.git /opt/http-request-smuggler/
+git clone https://github.com/PortSwigger/http-request-smuggler.git /opt/http-request-smuggler/
 git clone https://github.com/LinuxUser255/Python-Object-Oriented-Programming---4th-edition.git  /opt/Python-Object-Oriented-Programming---4th-edition/
 git clone https://github.com/LinuxUser255/Micro-Degree-in-Python-Security.git  /opt/Micro-Degree-in-Python-Security/
 git clone https://github.com/LinuxUser255/Python-for-Everyday-Life.git  /opt/Python-for-Everyday-Life/
@@ -167,7 +170,12 @@ git clone https://github.com/LinuxUser255/Python-Web-Scraping-Second-Edition.git
 git clone https://github.com/LinuxUser255/Welcome_to_INITECH.git  /opt/Welcome_to_INITECH/
 git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 
+# Spiderfoot. Tis is an amazing automated OSINT tool. Open Source Intelligence.
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
+
+# Download any videos you want from YouTube, Vimeo, Odysee and more with yt-dlp: https://github.com/yt-dlp/yt-dlp#release-files
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 # Install Wireguard and Mullvad
 chmod +x /opt/Mullvad_Wireguard/install.sh
@@ -178,7 +186,7 @@ curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.A
 chmod +x /opt/Obsidian-0.15.9.AppImage
 mv /opt/Obsidian-0.15.9.AppImage -t /usr/bin
 
-# DL and INstall Free Tube
+# Download and Install Free Tube
 wget https://github.com/FreeTubeApp/FreeTube/releases/tag/v0.17.1-beta/freetube_0.17.1_amd64.deb
 sudo dpkg -i freetube_0.17.1_arm64.deb
 
@@ -244,17 +252,23 @@ cd ~/.vim/YouCompleteMe
 python3 install.py --all
 
 # Chang Default Shell to use ZSH
-echo 'Enter the username: '
+echo 'Enter your username. The name of the user who you are logged in as: '
 read USER_NAME
 
 sudo -s
 chsh -s /bin/zsh root
-chsh -s /bin/zsh  ${USER_NAME} # <-- put the user name you created when installing Linux
+chsh -s /bin/zsh  ${USER_NAME} 
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# NeoVim CHad
+# Color autocompletion for zsh
+sudo apt install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# NeoVim Chad
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Final update
