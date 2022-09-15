@@ -9,6 +9,6 @@ Feel free to make any suggestions, push requests etc..
 To download and install this script, run the following commands in your terminal:
 
 ```
-curl -LO https://raw.githubusercontent.com/LinuxUser255/DebianRice/main/carbs.sh
-sh carbs.sh
+curl -LO https://raw.githubusercontent.com/LinuxUser255/DebianRice/main/drice.sh
+sh drice.sh
 ```
