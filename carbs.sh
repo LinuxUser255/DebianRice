@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Update and stuff
+# Updates and stuff
 # Feel free to comment out any of the stuff you don't want.
 sudo apt update; sudo apt upgrade
 sudo apt install git
@@ -9,9 +9,8 @@ sudo apt install curl
 sudo apt install vim
 sudo apt install neovim
 sudo apt install neofetch
-sudo apt install zsh
 sudo apt install pass
-sudo apt install rip-grep
+sudo apt install ripgrep
 sudo apt install terminator
 sudo apt install kwrite
 sudo apt install audacious
@@ -115,7 +114,6 @@ chmod +x /opt/xmrlert
 chmod +x /opt/pw1
 chmod +x /opt/pw2
 
-
 sudo mv /opt/f  -t /usr/bin
 sudo mv /opt/fastgrep -t /usr/bin
 sudo mv /opt/fff -t /usr/bin
@@ -170,7 +168,7 @@ git clone https://github.com/LinuxUser255/Python-Web-Scraping-Second-Edition.git
 git clone https://github.com/LinuxUser255/Welcome_to_INITECH.git  /opt/Welcome_to_INITECH/
 git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 
-# Spiderfoot. Tis is an amazing automated OSINT tool. Open Source Intelligence.
+# Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Download any videos you want from YouTube, Vimeo, Odysee and more with yt-dlp: https://github.com/yt-dlp/yt-dlp#release-files
@@ -219,13 +217,17 @@ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye
 sudo apt install virtualbox-6.1
 
 # Download and Install INtelliJ IDE and Pycharm
-mkdir /opt/Pycharm
-sudo chown ${USER} /opt/Pycharm
-curl -Ls https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=linux&code=PCC -o /opt/Pycharm
+wget -O /tmp/pycharm.tar.gz "https://download.jetbrains.com/python/pycharm-community-2022.2.1.tar.gz"
+tar -xf /tmp/pycharm.tar.gz --directory /opt
+sudo chown ${USER} /opt/pycharm-community-2022.2.1
 
 mkdir /opt/INtelliJ_Idea
 sudo chown ${USER} /opt/IntelliJ_IDEA
-curl -Ls https://www.jetbrains.com/idea/download/download-thanks.html?platform=linux&code=IIC -o /opt/IntelliJ_IDEA
+wget https://download.jetbrains.com/idea/ideaIU-2022.2.2.tar.gz
+tar -zxvf ideaIC-*.tar.gz
+sudo mkdir /opt/idea/
+sudo chmod 777 /opt/idea/
+mv idea-*/* /opt/idea/
 
 # Install plugins for vim and neovim
 ## Vim Plug
@@ -268,17 +270,16 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# NeoVim Chad
+# NeoVim Chad.. all the plugins one could want in one program for Neovim.
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Final update
 sudo apt update; sudo apt upgrade
 
 # Reminder
-printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/professional-community-2022-8-2  \e[0m"
-
-printf "\e[1;31m Burp Suite check sum: SHA256: 2aa90706f60e3c3e58175ebe9fe09c8f55a4c94f56479e6d218de0580f7228fd \e[0m"
-
+echo ""
+printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/  \e[0m"
+printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
 printf "\e[1;31m Mullvad should be installed and ready to run now. \e[0m"
 
 echo ""
