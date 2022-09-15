@@ -50,7 +50,10 @@ sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb
 cargo install alacritty
 
 # Download stuff from youtube
-python3 -m pip install -U yt-dlp
+# python3 -m pip install -U yt-dlp
+# Download any videos you want from YouTube, Vimeo, Odysee and more with yt-dlp: https://github.com/yt-dlp/yt-dlp#release-files
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 # Download & install Electrum BTC Wallet
 # Install dependencies
@@ -170,10 +173,6 @@ git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 
 # Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
-
-# Download any videos you want from YouTube, Vimeo, Odysee and more with yt-dlp: https://github.com/yt-dlp/yt-dlp#release-files
-sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 # Install Wireguard and Mullvad
 chmod +x /opt/Mullvad_Wireguard/install.sh
