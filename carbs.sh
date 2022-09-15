@@ -252,14 +252,6 @@ apt install mono-complete golang nodejs default-jdk npm
 cd ~/.vim/YouCompleteMe
 python3 install.py --all
 
-# Chang Default Shell to use ZSH
-echo 'Enter your username. The name of the user who you are logged in as: '
-read USER_NAME
-
-sudo -s
-chsh -s /bin/zsh root
-chsh -s /bin/zsh  ${USER_NAME} 
-
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -281,6 +273,10 @@ printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/r
 printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
 printf "\e[1;31m Mullvad should be installed and ready to run now. \e[0m"
 
-echo ""
-echo "DONE!"
-echo ""
+# Chang Default Shell to use ZSH
+echo 'Chang Default Shell to use ZSH. Enter your username. The name of the user who you are logged in as: '
+read USER_NAME
+
+sudo -s
+chsh -s /bin/zsh root
+chsh -s /bin/zsh  ${USER_NAME} 
