@@ -1,3 +1,4 @@
+![debian-logo](https://user-images.githubusercontent.com/46334926/190446611-cd8882d5-546e-46ac-8185-506caf3c23f4.png)
 # DebianRice
 
 ```
