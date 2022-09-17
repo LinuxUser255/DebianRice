@@ -45,7 +45,7 @@ sudo apt install ckb-next
 # Install cargo and Allacritty dependencies
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 printf "\e[1;34 Installing Alacritty & Rust \e[0m"
-apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
