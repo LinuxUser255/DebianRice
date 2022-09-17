@@ -187,7 +187,7 @@ printf "\e[1;34 Installing Spiderfoot. This is an amazing automated OSINT tool. 
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Install Wireguard and Mullvad
-printf "\e[1;34 Installing Wireguard & Mullvad VPNp \e[0m"
+printf "\e[1;34 Installing Wireguard & Mullvad VPN \e[0m"
 chmod +x /opt/Mullvad_Wireguard/install.sh
 sh /opt/Mullvad_Wireguard/install.sh
 
