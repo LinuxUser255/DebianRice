@@ -270,6 +270,7 @@ printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/r
 printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
 printf "\e[1;34 Download Postman: https://www.postman.com/downloads/ \e[0m"
 printf "\e[1;34 Freetube: https://freetubeapp.io/#download \e[0m"
+printf "\e[1;34 https://xmrig.com/ \e[0m"
 echo ""
 
 # Chang Default Shell to use ZSH
