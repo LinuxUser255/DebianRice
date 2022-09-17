@@ -43,10 +43,13 @@ sudo apt install ckb-next
 
 # Install cargo and Allacritty dependencies
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
-sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-cargo install alacritty
+rustup override set stable
+cargo build --release
 
 # Download stuff from youtube
 # python3 -m pip install -U yt-dlp
