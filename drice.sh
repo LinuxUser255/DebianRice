@@ -2,6 +2,7 @@
 
 # Updates and stuff
 # Feel free to comment out any of the stuff you don't want.
+printf "\e[1;34 Installing Updates and stuff \e[0m"
 sudo apt update; sudo apt upgrade
 sudo apt install git
 sudo apt install wget
@@ -43,6 +44,7 @@ sudo apt install ckb-next
 
 # Install cargo and Allacritty dependencies
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+printf "\e[1;34 Installing Alacritty & Rust \e[0m"
 apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty
@@ -53,15 +55,16 @@ rustup update stable
 cargo build --release
 
 
-
 # Download stuff from youtube
 # python3 -m pip install -U yt-dlp
 # Download any videos you want from YouTube, Vimeo, Odysee and more with yt-dlp: https://github.com/yt-dlp/yt-dlp#release-files
+printf "\e[1;34 Installing yt-dlp, download videos from YouTube \e[0m"
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 # Download & install Electrum BTC Wallet
 # Install dependencies
+printf "\e[1;34 Download & install Electrum BTC Wallet \e[0m"
 sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
 
 # download package
@@ -76,6 +79,7 @@ sudo apt-get install python3-setuptools python3-pip
 python3 -m pip install --user Electrum-4.3.1.tar.gz
 
 # Install some dot files
+printf "\e[1;34 Installing some dot files \e[0m"
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.vimrc -o ~/.vimrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
@@ -279,10 +283,13 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # NeoVim Chad.. all the plugins one could want in one program for Neovim.
+printf "\e[1;34 Installing NeoVim Chad. \e[0m"
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Final update
+printf "\e[1;34 Final update \e[0m"
 sudo apt update; sudo apt upgrade
+echo ""
 
 # Reminder
 echo ""
