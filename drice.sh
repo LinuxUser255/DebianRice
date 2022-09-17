@@ -49,7 +49,10 @@ cd alacritty
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup override set stable
+rustup update stable
 cargo build --release
+
+
 
 # Download stuff from youtube
 # python3 -m pip install -U yt-dlp
@@ -139,6 +142,8 @@ sudo mv /opt/pw1 -t /usr/bin
 sudo mv /opt/pw2 -t /usr/bin
 
 # Some hacking stuff and a bunch of Python repos
+printf "\e[1;34 hacking stuff and a bunch of Python repos \e[0m"
+Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
 git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
 git clone https://github.com/LinuxUser255/BashAndLinux.git /opt/BashAndLinux/
@@ -174,23 +179,28 @@ git clone https://github.com/LinuxUser255/Welcome_to_INITECH.git  /opt/Welcome_t
 git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 
 # Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
+printf "\e[1;34 Installing Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence. \e[0m"
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Install Wireguard and Mullvad
+printf "\e[1;34 Installing Wireguard & Mullvad VPNp \e[0m"
 chmod +x /opt/Mullvad_Wireguard/install.sh
 sh /opt/Mullvad_Wireguard/install.sh
 
 # Install Obsidian, the markdown note taking app
+printf "\e[1;34 Installing Obsidian, the markdown note taking app \e[0m"
 curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.AppImage
 chmod +x /opt/Obsidian-0.15.9.AppImage
 mv /opt/Obsidian-0.15.9.AppImage -t /usr/bin
 
 # Download and Install Free Tube
+printf "\e[1;34 Installing Free-Tube \e[0m"
 wget https://github.com/FreeTubeApp/FreeTube/releases/tag/v0.17.1-beta/freetube_0.17.1_amd64.deb
 sudo dpkg -i freetube_0.17.1_arm64.deb
 
 # Install Signal
 # Install our official public software signing key
+printf "\e[1;34 Installing Signal \e[0m"
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 
@@ -202,6 +212,7 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
 sudo apt update; sudo apt install signal-desktop
 
 # Install Brave browser
+printf "\e[1;34 Installing Brave Browser \e[0m"
 sudo apt install apt-transport-https curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -209,6 +220,7 @@ sudo apt update
 sudo apt install brave-browser
 
 # Install de-Googled chromium
+printf "\e[1;34 Installing de-Googled chromium \e[0m"
 sudo apt install chromium
 
 # Install Virtualbox
@@ -217,12 +229,13 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
 echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 sudo apt install virtualbox-6.1
 
-# Download and Install INtelliJ IDE and Pycharm
+# Download and Install IntelliJ IDE and Pycharm
+printf "\e[1;34 Installing intellij IDEs \e[0m"
 wget -O /tmp/pycharm.tar.gz "https://download.jetbrains.com/python/pycharm-community-2022.2.1.tar.gz"
 tar -xf /tmp/pycharm.tar.gz --directory /opt
 sudo chown ${USER} /opt/pycharm-community-2022.2.1
 
-mkdir /opt/INtelliJ_Idea
+mkdir /opt/IntelliJ_Idea
 sudo chown ${USER} /opt/IntelliJ_IDEA
 wget https://download.jetbrains.com/idea/ideaIU-2022.2.2.tar.gz
 tar -zxvf ideaIC-*.tar.gz
@@ -232,6 +245,7 @@ mv idea-*/* /opt/idea/
 
 # Install plugins for vim and neovim
 ## Vim Plug
+printf "\e[1;34 Installing plugins for vim and neovim \e[0m"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -255,6 +269,7 @@ cd ~/.vim/YouCompleteMe
 python3 install.py --all
 
 # install oh-my-zsh
+printf "\e[1;34 installing oh-my-zsh \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Color autocompletion for zsh
@@ -271,12 +286,17 @@ sudo apt update; sudo apt upgrade
 
 # Reminder
 echo ""
+printf "\e[1;34 Remiders & Extra Stuff. \e[0m"
+echo ""
 printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/  \e[0m"
 printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
 printf "\e[1;34 Download Postman: https://www.postman.com/downloads/ \e[0m"
 printf "\e[1;34 Freetube: https://freetubeapp.io/#download \e[0m"
 printf "\e[1;34 https://xmrig.com/ \e[0m"
 printf "\e[1;34 Alacritty post build stuff:  https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build \e[0m"
+printf "\e[1;34 Alacritty ZSH Completions mkdir -p ${ZDOTDIR:-~}/.zsh_functions \e[0m"
+printf "\e[1;34 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc \e[0m"
+printf "\e[1;34 cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty \e[0m"
 echo ""
 
 # Chang Default Shell to use ZSH
