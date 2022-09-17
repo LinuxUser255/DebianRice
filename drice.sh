@@ -276,6 +276,7 @@ printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://l
 printf "\e[1;34 Download Postman: https://www.postman.com/downloads/ \e[0m"
 printf "\e[1;34 Freetube: https://freetubeapp.io/#download \e[0m"
 printf "\e[1;34 https://xmrig.com/ \e[0m"
+printf "\e[1;34 Alacritty post build stuff:  https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build \e[0m"
 echo ""
 
 # Chang Default Shell to use ZSH
