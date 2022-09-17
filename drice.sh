@@ -14,6 +14,8 @@ sudo apt install neofetch
 sudo apt install pass
 sudo apt install ripgrep
 sudo apt install terminator
+sudo apt install xset
+sudo apt install redshift
 sudo apt install kwrite
 sudo apt install audacious
 sudo apt install mystiq
