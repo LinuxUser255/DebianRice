@@ -2,7 +2,7 @@
 
 # Updates and stuff
 # Feel free to comment out any of the stuff you don't want.
-printf "\e[1;34 Installing Updates and stuff \e[0m"
+printf "\e [1;34 Installing Updates and stuff \e[0m"
 sudo apt update; sudo apt upgrade
 sudo apt install git
 sudo apt install wget
@@ -46,7 +46,7 @@ sudo apt install ckb-next
 
 # Install cargo and Allacritty dependencies
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md
-printf "\e[1;34 Installing Alacritty & Rust \e[0m"
+printf "\e 1;34 Installing Alacritty & Rust \e[0m"
 sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty
@@ -60,13 +60,13 @@ cargo build --release
 # Download stuff from youtube
 # python3 -m pip install -U yt-dlp
 # Download any videos you want from YouTube, Vimeo, Odysee and more with yt-dlp: https://github.com/yt-dlp/yt-dlp#release-files
-printf "\e[1;34 Installing yt-dlp, download videos from YouTube \e[0m"
+printf "\e [1;34 Installing yt-dlp, download videos from YouTube \e[0m"
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 # Download & install Electrum BTC Wallet
 # Install dependencies
-printf "\e[1;34 Download & install Electrum BTC Wallet \e[0m"
+printf "\e [1;34 Download & install Electrum BTC Wallet \e[0m"
 sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
 
 # download package
@@ -81,7 +81,7 @@ sudo apt-get install python3-setuptools python3-pip
 python3 -m pip install --user Electrum-4.3.1.tar.gz
 
 # Install some dot files
-printf "\e[1;34 Installing some dot files \e[0m"
+printf "\e [1;34 Installing some dot files \e[0m"
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.vimrc -o ~/.vimrc
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
@@ -149,8 +149,6 @@ sudo mv /opt/pw2 -t /usr/bin
 
 # Some hacking stuff and a bunch of Python repos
 printf "\e[1;34 hacking stuff and a bunch of Python repos \e[0m"
-Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
-git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r/
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
 git clone https://github.com/LinuxUser255/BashAndLinux.git /opt/BashAndLinux/
 git clone https://github.com/danielmiessler/SecLists.git  /opt/Seclists/
@@ -158,43 +156,23 @@ git clone https://github.com/defparam/smuggler.git /opt/smuggler/
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Pay-Loads-All-The-Things/
 git clone https://github.com/LinuxUser255/RandoHackingStuff.git /opt/HackingStuff/
 git clone https://github.com/LinuxUser255/Mullvad_Wireguard.git /opt/Mullvad_Wireguard/
-git clone https://github.com/LinuxUser255/Instagram-downloader.git /opt/Instagram-downloader/
 git clone https://github.com/LinuxUser255/passwordgen.git /opt/passwordgen/
 git clone https://github.com/LinuxUser255/Monero_Extras.git /opt/Monero_Extras/
 git clone https://github.com/LinuxUser255/Python_Intruder.git  /opt/Python_Intruder/
 git clone https://github.com/LinuxUser255/xmrig.git  /opt/xmrig/
 git clone https://github.com/PortSwigger/http-request-smuggler.git /opt/http-request-smuggler/
-git clone https://github.com/LinuxUser255/Python-Object-Oriented-Programming---4th-edition.git  /opt/Python-Object-Oriented-Programming---4th-edition/
-git clone https://github.com/LinuxUser255/Micro-Degree-in-Python-Security.git  /opt/Micro-Degree-in-Python-Security/
-git clone https://github.com/LinuxUser255/Python-for-Everyday-Life.git  /opt/Python-for-Everyday-Life/
-git clone https://github.com/LinuxUser255/Expert-Python-Programming-Fourth-Edition.git  /opt/Expert-Python-Programming-Fourth-Edition/
-git clone https://github.com/LinuxUser255/turbo-intruder.git  /opt/turbo-intruder/
-git clone https://github.com/LinuxUser255/Python_Penetration_Testing.git  /opt/Python_Penetration_Testing/
-git clone https://github.com/LinuxUser255/Python-Fundamentals.git  /opt/Python-Fundamentals/
-git clone https://github.com/LinuxUser255/Modern-Python-Cookbook-Second-Edition.git  /opt/Modern-Python-Cookbook-Second-Edition/
-git clone https://github.com/LinuxUser255/Python-3-Object-Oriented-Programming-Third-Edition.git  /opt/Python-3-Object-Oriented-Programming-Third-Edition/
-git clone https://github.com/LinuxUser255/Clean-Code-in-Python-Second-Edition.git  /opt/Clean-Code-in-Python-Second-Edition/
-git clone https://github.com/LinuxUser255/Functional-Python-Programming-Second-Edition.git  /opt/Functional-Python-Programming-Second-Edition/
-git clone https://github.com/LinuxUser255/Python-Web-Scraping-Cookbook.git  /opt/Python-Web-Scraping-Cookbook/
-git clone https://github.com/LinuxUser255/Python-Penetration-Testing-Cookbook.git  /opt/Python-Penetration-Testing-Cookbook/
-git clone https://github.com/LinuxUser255/Learning-Concurrency-in-Python.git  /opt/Learning-Concurrency-in-Python/
-git clone https://github.com/LinuxUser255/Mastering-Python-Networking.git  /opt/Mastering-Python-Networking/
-git clone https://github.com/LinuxUser255/Effective-Python-Penetration-Testing.git  /opt/Effective-Python-Penetration-Testing/
-git clone https://github.com/LinuxUser255/Python-Web-Scraping-Second-Edition.git  /opt/Python-Web-Scraping-Second-Edition/
-git clone https://github.com/LinuxUser255/Welcome_to_INITECH.git  /opt/Welcome_to_INITECH/
-git clone https://github.com/LinuxUser255/MS17-011.git  /opt/MS17-011/
 
 # Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
-printf "\e[1;34 Installing Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence. \e[0m"
+printf "\e [1;34 Installing Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence. \e[0m"
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
 
 # Install Wireguard and Mullvad
-printf "\e[1;34 Installing Wireguard & Mullvad VPN \e[0m"
+printf "\e [1;34 Installing Wireguard & Mullvad VPN \e[0m"
 chmod +x /opt/Mullvad_Wireguard/install.sh
 sh /opt/Mullvad_Wireguard/install.sh
 
 # Install Obsidian, the markdown note taking app
-printf "\e[1;34 Installing Obsidian, the markdown note taking app \e[0m"
+printf "\e [1;34 Installing Obsidian, the markdown note taking app \e[0m"
 curl -Ls https://obsidian.md/Obsidian-0.15.9.AppImage -o  /opt/Obsidian-0.15.9.AppImage
 chmod +x /opt/Obsidian-0.15.9.AppImage
 mv /opt/Obsidian-0.15.9.AppImage -t /usr/bin
@@ -218,7 +196,7 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
 sudo apt update; sudo apt install signal-desktop
 
 # Install Brave browser
-printf "\e[1;34 Installing Brave Browser \e[0m"
+printf "\e [1;34 Installing Brave Browser \e[0m"
 sudo apt install apt-transport-https curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -226,7 +204,7 @@ sudo apt update
 sudo apt install brave-browser
 
 # Install de-Googled chromium
-printf "\e[1;34 Installing de-Googled chromium \e[0m"
+printf "\e [1;34 Installing de-Googled chromium \e[0m"
 sudo apt install chromium
 
 # Install Virtualbox
@@ -236,7 +214,7 @@ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye
 sudo apt install virtualbox-6.1
 
 # Download and Install IntelliJ IDE and Pycharm
-printf "\e[1;34 Installing intellij IDEs \e[0m"
+printf "\e [1;34 Installing intellij IDEs \e[0m"
 wget -O /tmp/pycharm.tar.gz "https://download.jetbrains.com/python/pycharm-community-2022.2.1.tar.gz"
 tar -xf /tmp/pycharm.tar.gz --directory /opt
 sudo chown ${USER} /opt/pycharm-community-2022.2.1
@@ -251,7 +229,7 @@ mv idea-*/* /opt/idea/
 
 # Install plugins for vim and neovim
 ## Vim Plug
-printf "\e[1;34 Installing plugins for vim and neovim \e[0m"
+printf "\e [1;34 Installing plugins for vim and neovim \e[0m"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -275,7 +253,7 @@ cd ~/.vim/YouCompleteMe
 python3 install.py --all
 
 # install oh-my-zsh
-printf "\e[1;34 installing oh-my-zsh \e[0m"
+printf "\e [1;34 installing oh-my-zsh \e[0m"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Color autocompletion for zsh
