@@ -3,6 +3,7 @@
 # Updates and stuff
 # Feel free to comment out any of the stuff you don't want.
 printf "\e [1;34 Installing Updates and stuff \e[0m"
+echo ""
 sudo apt update; sudo apt upgrade
 sudo apt install git
 sudo apt install wget
@@ -44,17 +45,7 @@ sudo apt install npm
 sudo apt install openrgb
 sudo apt install ckb-next
 
-# Install cargo and Allacritty dependencies
-# https://github.com/alacritty/alacritty/blob/master/INSTALL.md
-printf "\e 1;34 Installing Alacritty & Rust \e[0m"
-sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-rustup override set stable
-rustup update stable
-cargo build --release
+echo ""
 
 
 # Download stuff from youtube
@@ -64,11 +55,13 @@ printf "\e [1;34 Installing yt-dlp, download videos from YouTube \e[0m"
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
+echo ""
 # Download & install Electrum BTC Wallet
 # Install dependencies
 printf "\e [1;34 Download & install Electrum BTC Wallet \e[0m"
 sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
 
+echo ""
 # download package
 wget https://download.electrum.org/4.3.1/Electrum-4.3.1.tar.gz
 
@@ -80,12 +73,7 @@ gpg --verify Electrum-4.3.1.tar.gz.asc
 sudo apt-get install python3-setuptools python3-pip
 python3 -m pip install --user Electrum-4.3.1.tar.gz
 
-# Install some dot files
-printf "\e [1;34 Installing some dot files \e[0m"
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.vimrc -o ~/.vimrc
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
+
 
 # Give the current user ownership over the options directory
 sudo chown ${USER} * /opt
@@ -147,8 +135,14 @@ sudo mv /opt/xmrlert -t /usr/bin
 sudo mv /opt/pw1 -t /usr/bin
 sudo mv /opt/pw2 -t /usr/bin
 
+echo ""
 # Some hacking stuff and a bunch of Python repos
-printf "\e[1;34 hacking stuff and a bunch of Python repos \e[0m"
+printf "\e[1;34 hacking stuff and a bunch of Python repos \e[0m"# Install some dot files
+printf "\e [1;34 Installing some dot files \e[0m"
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.vimrc -o ~/.vimrc
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
 git clone https://github.com/secureauthcorp/impacket.git /opt/impacket/
 git clone https://github.com/LinuxUser255/BashAndLinux.git /opt/BashAndLinux/
 git clone https://github.com/danielmiessler/SecLists.git  /opt/Seclists/
@@ -162,6 +156,7 @@ git clone https://github.com/LinuxUser255/Python_Intruder.git  /opt/Python_Intru
 git clone https://github.com/LinuxUser255/xmrig.git  /opt/xmrig/
 git clone https://github.com/PortSwigger/http-request-smuggler.git /opt/http-request-smuggler/
 
+echo ""
 # Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence.
 printf "\e [1;34 Installing Spiderfoot. This is an amazing automated OSINT tool. Open Source Intelligence. \e[0m"
 wget https://github.com/smicallef/spiderfoot/archive/v3.5.tar.gz -P /opt/scrawler/spiderfoot/v3.5.tar.gz
@@ -270,6 +265,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 printf "\e [1;34 Final update \e[0m"
 sudo apt update; sudo apt upgrade
 echo ""
+echo ""
 
 # Reminder
 echo ""
@@ -294,5 +290,27 @@ echo ""
 #chsh -s /bin/zsh root
 sudo chsh -s /bin/zsh ${USER} 
 
-echo "Done!"
+# Install cargo and Allacritty dependencies
+# https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+printf "\e 1;34 Installing Alacritty & Rust \e[0m"
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+rustup override set stable
+rustup update stable
+cargo build --release
 
+# Install some dot files
+printf "\e [1;34 Installing some dot files \e[0m"
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.vimrc -o ~/.vimrc
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.bashrc -o ~/.bashrc
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
+
+echo " "
+echo "experimental kernel 5.19 upgrade: https://sleeplessbeastie.eu/2022/07/05/how-to-install-recent-kernel-using-experimental-debian-distribution/ "
+echo ""
+echo "Done!"
+echo ""
