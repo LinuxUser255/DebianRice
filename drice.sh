@@ -184,7 +184,7 @@ sudo dpkg -i freetube_0.17.1_arm64.deb
 
 # Install Signal
 # Install our official public software signing key
-printf "\e[1;34 Installing Signal \e[0m"
+printf "\e [1;34 Installing Signal \e[0m"
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 
@@ -267,32 +267,32 @@ printf "\e[1;34 Installing NeoVim Chad. \e[0m"
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # Final update
-printf "\e[1;34 Final update \e[0m"
+printf "\e [1;34 Final update \e[0m"
 sudo apt update; sudo apt upgrade
 echo ""
 
 # Reminder
 echo ""
-printf "\e[1;34 Remiders & Extra Stuff. \e[0m"
+printf "\e [1;34 Remiders & Extra Stuff. \e[0m"
 echo ""
-printf "\e[1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/  \e[0m"
-printf "\e[1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
-printf "\e[1;34 Download Postman: https://www.postman.com/downloads/ \e[0m"
-printf "\e[1;34 Freetube: https://freetubeapp.io/#download \e[0m"
-printf "\e[1;34 https://xmrig.com/ \e[0m"
-printf "\e[1;34 Alacritty post build stuff:  https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build \e[0m"
-printf "\e[1;34 Alacritty ZSH Completions mkdir -p ${ZDOTDIR:-~}/.zsh_functions \e[0m"
-printf "\e[1;34 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc \e[0m"
-printf "\e[1;34 cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty \e[0m"
+printf "\e [1;31m Download and install Burp Suite: https://portswigger.net/burp/releases/  \e[0m"
+printf "\e [1;31m To download the latest Kernel for Debian 11 Bullseye: https://linuxhint.com/upgrade-kernel-in-debian-11-bullseye/  \e[0m"
+printf "\e [1;34 Download Postman: https://www.postman.com/downloads/ \e[0m"
+printf "\e [1;34 Freetube: https://freetubeapp.io/#download \e[0m"
+printf "\e [1;34 https://xmrig.com/ \e[0m"
+printf "\e [1;34 Alacritty post build stuff:  https://github.com/alacritty/alacritty/blob/master/INSTALL.md#post-build \e[0m"
+printf "\e [1;34 Alacritty ZSH Completions mkdir -p ${ZDOTDIR:-~}/.zsh_functions \e[0m"
+printf "\e [1;34 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc \e[0m"
+printf "\e [1;34 cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty \e[0m"
 echo ""
 
 # Chang Default Shell to use ZSH
 printf "\e[1;31m Changing the default Shell ZSH \e[0m"
 echo ""
 
-sudo -s
-chsh -s /bin/zsh root
-chsh -s /bin/zsh ${USER} 
+#sudo -s
+#chsh -s /bin/zsh root
+sudo chsh -s /bin/zsh ${USER} 
 
 echo "Done!"
 
