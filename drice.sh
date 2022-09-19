@@ -203,10 +203,10 @@ printf "\e [1;34 Installing de-Googled chromium \e[0m"
 sudo apt install chromium
 
 # Install Virtualbox
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-sudo apt install virtualbox-6.1
+#wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+#wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+#echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+#sudo apt install virtualbox-6.1
 
 # Download and Install IntelliJ IDE and Pycharm
 printf "\e [1;34 Installing intellij IDEs \e[0m"
