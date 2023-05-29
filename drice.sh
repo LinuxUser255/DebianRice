@@ -129,8 +129,8 @@ rm -fr nvim-linux64.tar.gz
 ln -s ./nvim-linux64/bin/nvim ./nvim
 
 
-# nvchad
-
+# Install nvchad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 
 # go
 
