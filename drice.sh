@@ -184,24 +184,32 @@ xset -q | grep "Caps Lock:\s*on" && xdotool key Caps_Lock
 printf "\e[1;31m Install Zsh latest.\e[0m"
 echo ""
 printf "\e[1;31m https://zsh.sourceforge.io/Arc/source.html.\e[0m"
-echo "" 
+echo ""                                                         
+printf "\e[1;31m https://sourceforge.net/p/zsh/code/ci/5.9/tree/.\e[0m"
+echo ""
 printf "\e[1;31m https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download .\e[0m"
-
-
-# change to zsh and make default shell
-# then continue running this script in the new shell
-chsh -s $(which zsh);
-
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-#echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-
-# import my .zshrc
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc
-
-# source/instantiate syntax-highlighting
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+echo ""
+printf "\e[1;31m # change to zsh and make default shell .\e[0m"
+printf "\e[1;31m # then continue running this script in the new shell.\e[0m"
+printf "\e[1;31m # change to zsh and make default shell .\e[0m"
+printf "\e[1;31m chsh -s /usr/bin/zsh .\e[0m"
+printf "\e[1;31m # then continue running this script in the new shell .\e[0m"
+printf "\e[1;31m # then continue running this script in the new shell .\e[0m"
+printf "\e[1;31m # install oh-my-zsh .\e[0m"
+printf "\e[1;31m sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"  .\e[0m"
+printf "\e[1;31m # zsh-syntax-highlighting .\e[0m"
+printf "\e[1;31m git clone https://github.com/zsh-users/zsh-syntax-highlighting.git .\e[0m"
+printf "\e[1;31m #echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshr .\e[0m"
+printf "\e[1;31m # import my .zshrc .\e[0m"
+printf "\e[1;31m curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc .\e[0m"
+printf "\e[1;31m # import my .zshrc \e[0m"
+printf "\e[1;31m curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/.zshrc -o ~/.zshrc \e[0m"
+printf "\e[1;31m # source/instantiate syntax-highlighting \e[0m"
+printf "\e[1;31m source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh \e[0m"
+echo ''
+printf "\e[1;31m for remaining instructions go to: https://github.com/LinuxUser255/DebianRice \e[0m"
+echo ''
+# printf "\e[1;31m \e[0m"
+# printf "\e[1;31m \e[0m"
+# printf "\e[1;31m \e[0m"
+# printf "\e[1;31m \e[0m"
