@@ -5,7 +5,7 @@
 sudo apt update && sudo apt upgrade;
 
 # essential pkgs
-sudo apt install git wget curl gzip scdoc neovim zsh freetube fzf neofetch pass ripgrep xset redshift kwrite audacious mystiq kdenlive haruna kodi gimp ranger mpv simplescreenrecorder vlc net-tools sqlmap netdiscover nmap cmake fzf nodejs npm openrgb ckb-next chromium yt-dlp
+sudo apt install git wget curl gzip scdoc fzf neofetch pass ripgrep redshift kwrite audacious mystiq kdenlive haruna kodi gimp ranger mpv simplescreenrecorder vlc net-tools sqlmap netdiscover nmap cmake hashcat nodejs npm openrgb ckb-next 
 sudo apt -y install lua5.1
 
 # Install shortcut scripts, make executable then move all to /usr/bin
@@ -53,24 +53,27 @@ sudo mv pw-search -t /usr/bin/
 
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/py -o py
 chmod +x py
-sudo mv py -t /usr/bin/py
+sudo mv py -t /usr/bin/
 
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/red -o red
 chmod +x red
-sudo mv red -t /usr/bin/red
+sudo mv red -t /usr/bin/
 
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/tarcmds -o tarcmds
 chmod +x tarcmds
-sudo mv tarcmds -t /usr/bin/tarcmds
+sudo mv tarcmds -t /usr/bin/
 
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xfh -o xfh
 chmod +x xfh
-sudo mv xfh -t /usr/bin/xfh
+sudo mv xfh -t /usr/bin/
 
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/UsrBin/xmrlert -o xmrlert
 chmod +x xmrlert
-sudo mv xmrlert -t /usr/bin/xmrlert
+sudo mv xmrlert -t /usr/bin/
 
+# Install yt-dlp https://github.com/yt-dlp/yt-dlp/wiki/Installation
+sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod a+rx /usr/local/bin/yt-dlp  # Make executable
 
 # install programs & software:
 # brave
@@ -85,31 +88,6 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 sudo apt update
 sudo apt install brave-browser
 
-
-echo ""
-# Download & install Electrum BTC Wallet
-# Install dependencies
-printf "\e [1;34 Download & install Electrum BTC Wallet \e[0m"
-sudo apt-get install python3-pyqt5 libsecp256k1-0 python3-cryptography
-
-echo ""
-# download package
-wget https://download.electrum.org/4.3.1/Electrum-4.3.1.tar.gz
-
-# Verify signatures
-wget https://download.electrum.org/4.3.1/Electrum-4.3.1.tar.gz.asc
-gpg --verify Electrum-4.3.1.tar.gz.asc
-
-#Install with pip
-sudo apt-get install python3-setuptools python3-pip
-python3 -m pip install --user Electrum-4.3.1.tar.gz
-
-
-# Install zsh 5.8 or higher
-# see bottom of script for instructions
-
-
-
 # update to latest version of python3 and pip3
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 wget https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tgz -P ~/Downloads
@@ -121,34 +99,55 @@ nproc
 sudo make install
 
 
-# Install Alacritty
+# Install Alacritty..Manual install
 # https://github.com/alacritty/alacritty/blob/master/INSTALL.md
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
+# Install Dependencies, Install the Rust compiler, & select option 1
+printf "\e[1;31m When prompted to select installation, use 1.\e[0m"
+sudo apt install curl git cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Source the cargo environment.
+source $HOME/.cargo/env
+
+# Ensure that you have the right compiler.
 rustup override set stable
 rustup update stable
-apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+
+# Clone the Alacritty source code
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+
+# clone the source code
+git clone https://github.com/alacritty/alacritty.git
+
+# Build Alacritty from source.
 cargo build --release
 
-# printf "\e[1;31m If  infocmp returns withou any errors, the alacritty terminfo is already installed \e[0m"
+# Post Build Alacritty Configurations.
 infocmp alacritty
-echo ''
 
-# printf "\e[1;31m If it is not present already, you can install it globally with the following command \e[0m"
+# Ensure Alacritty is installed globally
 sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
-echo ''
 
-cd ..
-
-# Desktop Entry
-sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+# you must be in the alacritty directory to successfully complete the Desktop entry
+# /home/linux/alacritty
+sudo cp target/release/alacritty /usr/local/bin
 sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 
+# Creating the man pages
+sudo mkdir -p /usr/local/share/man/man1
+gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+gzip -c extra/alacritty-msg.man | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
+
+# Shell completions for Zsh
+mkdir -p ${ZDOTDIR:-~}/.zsh_functions
+echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ${ZDOTDIR:-~}/.zshrc
+
 # Import my Alacritty configuration
 curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/.alacritty.yml
-curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacritty.yml -o ~/alacritty/.alacritty.yml
+curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/alacritty.yml -o ~/alacritty/alacritty.yml
 
 # Left to add to this script
 # Install the following........
@@ -181,6 +180,12 @@ curl -Ls https://raw.githubusercontent.com/LinuxUser255/BashAndLinux/main/.alacr
 xset r rate 300 80
 setxkbmap -option "caps:escape"
 xset -q | grep "Caps Lock:\s*on" && xdotool key Caps_Lock
+
+printf "\e[1;31m Install Zsh latest.\e[0m"
+echo ""
+printf "\e[1;31m https://zsh.sourceforge.io/Arc/source.html.\e[0m"
+echo "" 
+printf "\e[1;31m https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download .\e[0m"
 
 
 # change to zsh and make default shell
